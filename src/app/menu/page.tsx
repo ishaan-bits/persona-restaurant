@@ -17,11 +17,12 @@ export default function MenuPage() {
   }, []);
 
   const scrollToMenu = useCallback(() => {
-    const el = document.getElementById("menu-content");
-    if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 160;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+    requestAnimationFrame(() => {
+      const el = document.getElementById("menu-content");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
   }, []);
 
   const handleCategoryChange = (cat: string) => {
@@ -179,7 +180,7 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Content */}
-      <section id="menu-content" className="py-10 scroll-mt-40">
+      <section id="menu-content" className="py-10 scroll-mt-40 max-md:scroll-mt-52">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatePresence mode="wait">
             <motion.div
