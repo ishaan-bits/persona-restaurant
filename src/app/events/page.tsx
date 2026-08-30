@@ -115,6 +115,7 @@ export default function EventsPage() {
             src="/images/hero-events.jpg"
             alt="Celebration event"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

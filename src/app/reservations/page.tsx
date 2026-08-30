@@ -95,6 +95,7 @@ export default function ReservationsPage() {
             src="/images/hero-reservations.jpg"
             alt="Restaurant table setting"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

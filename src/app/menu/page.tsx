@@ -80,6 +80,7 @@ export default function MenuPage() {
             src="/images/hero-menu.jpg"
             alt="Fine dining dishes"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

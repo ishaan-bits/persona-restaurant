@@ -44,6 +44,7 @@ export default function ContactPage() {
             src="/images/hero-contact.jpg"
             alt="Restaurant ambiance"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

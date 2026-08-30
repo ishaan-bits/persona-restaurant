@@ -96,6 +96,7 @@ export default function GalleryPage() {
             src="/images/hero-gallery.jpg"
             alt="Restaurant interior"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
