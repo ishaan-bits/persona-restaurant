@@ -17,12 +17,12 @@ export default function MenuPage() {
   }, []);
 
   const scrollToMenu = useCallback(() => {
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       const el = document.getElementById("menu-content");
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    });
+    }, 50);
   }, []);
 
   const handleCategoryChange = (cat: string) => {
@@ -180,7 +180,7 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Content */}
-      <section id="menu-content" className="py-10 scroll-mt-40 max-md:scroll-mt-52">
+      <section id="menu-content" className="py-10 scroll-mt-44 md:scroll-mt-36">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatePresence mode="wait">
             <motion.div
