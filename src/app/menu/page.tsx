@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ChevronDown, ChevronUp, Utensils } from "lucide-react";
@@ -11,6 +11,23 @@ export default function MenuPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [vegOnly, setVegOnly] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const scrollToMenu = useCallback(() => {
+    const el = document.getElementById("menu-content");
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 160;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }, []);
+
+  const handleCategoryChange = (cat: string) => {
+    setActiveCategory(cat);
+    scrollToMenu();
+  };
 
   const toggleSection = (key: string) => {
     setExpandedSections((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -146,7 +163,7 @@ export default function MenuPage() {
               {menuCategories.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  onClick={() => handleCategoryChange(cat)}
                   className={`px-4 py-2 rounded-lg text-xs font-medium whitespace-nowrap transition-all duration-300 ${
                     activeCategory === cat
                       ? "bg-gold text-dark"
@@ -162,7 +179,7 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Content */}
-      <section className="py-10">
+      <section id="menu-content" className="py-10 scroll-mt-40">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatePresence mode="wait">
             <motion.div
