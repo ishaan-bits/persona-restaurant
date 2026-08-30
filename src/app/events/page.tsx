@@ -115,7 +115,7 @@ export default function EventsPage() {
           <span className="text-gold text-sm tracking-[0.3em] uppercase font-medium">
             Events & Parties
           </span>
-          <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-6xl font-bold mt-4 mb-6">
+          <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6">
             <span className="gold-text">Celebrate</span>{" "}
             <span className="text-cream">With Us</span>
           </h1>
@@ -157,7 +157,7 @@ export default function EventsPage() {
                     <p className="text-cream/50 text-sm mt-1">{event.desc}</p>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-2 ml-18">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:ml-18">
                   {event.features.map((feature) => (
                     <div
                       key={feature}

@@ -83,10 +83,10 @@ export default function MenuPage() {
               {totalCount} Dishes Available
             </span>
           </div>
-          <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl font-bold mb-4">
+          <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-7xl font-bold mb-4">
             <span className="gold-text-shine">Our Menu</span>
           </h1>
-          <p className="text-cream/50 text-lg max-w-xl mx-auto">
+          <p className="text-cream/50 text-base sm:text-lg max-w-xl mx-auto">
             Every dish tells a story. Explore our curated culinary journey.
           </p>
         </div>

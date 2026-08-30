@@ -44,7 +44,7 @@ export default function ContactPage() {
           <span className="text-gold text-sm tracking-[0.3em] uppercase font-medium">
             Get in Touch
           </span>
-          <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-6xl font-bold mt-4 mb-6">
+          <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6">
             <span className="gold-text">Contact</span>{" "}
             <span className="text-cream">Us</span>
           </h1>

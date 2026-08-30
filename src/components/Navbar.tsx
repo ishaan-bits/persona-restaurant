@@ -95,12 +95,20 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Mobile backdrop */}
+        {isOpen && (
+          <div
+            className="lg:hidden fixed inset-0 top-20 bg-dark/60 backdrop-blur-sm z-40"
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+
         <div
-          className={`lg:hidden transition-all duration-500 overflow-hidden ${
+          className={`lg:hidden fixed left-0 right-0 top-20 z-50 transition-all duration-500 overflow-hidden ${
             isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="glass mx-4 mb-4 rounded-xl p-4 space-y-1">
+          <div className="glass mx-4 rounded-xl p-4 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

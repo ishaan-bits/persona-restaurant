@@ -96,7 +96,7 @@ export default function GalleryPage() {
           <span className="text-gold text-sm tracking-[0.3em] uppercase font-medium">
             Gallery
           </span>
-          <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-6xl font-bold mt-4 mb-6">
+          <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-6xl font-bold mt-4 mb-6">
             <span className="gold-text">Visual</span>{" "}
             <span className="text-cream">Journey</span>
           </h1>
@@ -205,7 +205,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="max-w-5xl w-full mx-16 max-h-[85vh] overflow-hidden rounded-2xl"
+              className="max-w-5xl w-full mx-4 sm:mx-16 max-h-[85vh] overflow-hidden rounded-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <img

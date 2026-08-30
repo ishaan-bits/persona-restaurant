@@ -114,7 +114,7 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] mb-8">
+          <h1 className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] mb-8">
             <span className="text-stroke">Where</span>{" "}
             <span className="gold-text-shine">Every</span>
             <br />
@@ -122,7 +122,7 @@ export default function Home() {
             <span className="gold-text-shine">Crafted</span>
           </h1>
 
-          <p className="text-cream/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-cream/60 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
             Step into a world where culinary artistry meets golden elegance.
             Every dish, every detail, every moment – designed to captivate.
           </p>
