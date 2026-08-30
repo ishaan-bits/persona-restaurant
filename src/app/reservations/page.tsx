@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   Calendar,
   Clock,
@@ -89,8 +90,17 @@ export default function ReservationsPage() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-lighter to-dark" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px]" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-reservations.jpg"
+            alt="Restaurant table setting"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-dark/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-dark/70" />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="text-gold text-sm tracking-[0.3em] uppercase font-medium">
             Reservations

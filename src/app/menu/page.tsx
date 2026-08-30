@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, ChevronDown, ChevronUp, Utensils } from "lucide-react";
 import { menuData, menuCategories, type MenuItem, type MenuCategory } from "@/data/menu";
@@ -74,8 +75,17 @@ export default function MenuPage() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-lighter to-dark" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/5 rounded-full blur-[150px] animate-glow-pulse" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-menu.jpg"
+            alt="Fine dining dishes"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-dark/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-dark/70" />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/20 bg-gold/5 mb-6">
             <Utensils size={14} className="text-gold" />

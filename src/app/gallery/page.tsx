@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Camera } from "lucide-react";
 
@@ -90,8 +91,17 @@ export default function GalleryPage() {
     <div className="min-h-screen">
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark via-dark-lighter to-dark" />
-        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-gold/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-gallery.jpg"
+            alt="Restaurant interior"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-dark/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-dark/70" />
+        </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <span className="text-gold text-sm tracking-[0.3em] uppercase font-medium">
             Gallery
