@@ -45,18 +45,21 @@ const diningPartners = [
     desc: "Up to 40% off on pre-booking",
     color: "from-blue-500/20 to-blue-600/20",
     border: "border-blue-500/30",
+    href: "https://www.eazydiner.com/patna/persona-patliputra-colony-patna-692467",
   },
   {
     name: "Swiggy Dineout",
     desc: "Up to 30% off + extra discounts",
     color: "from-orange-500/20 to-red-500/20",
     border: "border-orange-500/30",
+    href: "https://www.swiggy.com/dineout",
   },
   {
     name: "District",
     desc: "Exclusive deals and cashbacks",
     color: "from-purple-500/20 to-pink-500/20",
     border: "border-purple-500/30",
+    href: "https://www.district.in/",
   },
 ];
 
@@ -349,9 +352,12 @@ export default function ReservationsPage() {
               </h3>
               <div className="space-y-3">
                 {diningPartners.map((partner) => (
-                  <div
+                  <a
                     key={partner.name}
-                    className={`p-4 rounded-xl bg-gradient-to-r ${partner.color} border ${partner.border} cursor-pointer hover:scale-[1.02] transition-transform`}
+                    href={partner.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block p-4 rounded-xl bg-gradient-to-r ${partner.color} border ${partner.border} cursor-pointer hover:scale-[1.02] transition-transform`}
                   >
                     <div className="font-semibold text-cream text-sm">
                       {partner.name}
@@ -359,7 +365,7 @@ export default function ReservationsPage() {
                     <div className="text-cream/50 text-xs mt-0.5">
                       {partner.desc}
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -369,13 +375,17 @@ export default function ReservationsPage() {
               <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold mb-4">
                 Find Us
               </h3>
-              <div className="aspect-video rounded-xl bg-dark overflow-hidden relative border border-gold/10">
-                <div className="absolute inset-0 flex items-center justify-center bg-dark-card">
-                  <div className="text-center">
-                    <MapPin size={32} className="text-gold mx-auto mb-2" />
-                    <p className="text-cream/40 text-xs">Google Maps</p>
-                  </div>
-                </div>
+              <div className="aspect-video rounded-xl overflow-hidden relative border border-gold/10">
+                <iframe
+                  src="https://www.google.com/maps?q=Persona+Restaurant+Patliputra+Colony+Patna+Bihar&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                />
               </div>
               <p className="text-cream/40 text-xs mt-3">
                 Plot 39/A, Patliputra Colony, Patna – 800013

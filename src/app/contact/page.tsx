@@ -184,7 +184,7 @@ export default function ContactPage() {
               </h3>
               <div className="space-y-5">
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/search/?api=1&query=Persona+Restaurant+Patliputra+Colony+Patna+Bihar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 text-cream/60 hover:text-gold transition-colors duration-300 group"
@@ -290,7 +290,7 @@ export default function ContactPage() {
                   <ExternalLink size={14} className="ml-auto opacity-50" />
                 </a>
                 <a
-                  href="https://maps.google.com"
+                  href="https://www.google.com/maps/search/?api=1&query=Persona+Restaurant+Patliputra+Colony+Patna+Bihar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-3 rounded-xl border border-gold/20 text-cream/60 hover:text-gold hover:bg-gold/5 transition-all text-sm font-medium"
@@ -307,16 +307,20 @@ export default function ContactPage() {
               <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-gold mb-4">
                 Find Us
               </h3>
-              <div className="aspect-video rounded-xl bg-dark overflow-hidden relative border border-gold/10">
-                <div className="absolute inset-0 flex items-center justify-center bg-dark-card">
-                  <div className="text-center">
-                    <MapPin size={32} className="text-gold mx-auto mb-2" />
-                    <p className="text-cream/40 text-xs">Google Maps</p>
-                  </div>
-                </div>
+              <div className="aspect-video rounded-xl overflow-hidden relative border border-gold/10">
+                <iframe
+                  src="https://www.google.com/maps?q=Persona+Restaurant+Patliputra+Colony+Patna+Bihar&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                />
               </div>
               <a
-                href="https://maps.google.com"
+                href="https://www.google.com/maps/search/?api=1&query=Persona+Restaurant+Patliputra+Colony+Patna+Bihar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 mt-3 text-gold text-sm hover:text-gold-light transition-colors"
